@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\CSS\Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway:wght@500&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\CSS\Nav-bar.css">
+</head>
+<body>
+    <div class="nav-bar">
+        
+        <div class="coloumn list">
+            <span></span>
+            <a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Home.html">Home</a>
+            <a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Library.html">Library</a>
+            <a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Shelf.html">Shelf</a>
+            <a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Login.html">Login</a>
+        </div> 
+        <div class="ham-burg">
+            <div class="ham-btn"></div>
+        </div>
+        <div class="coloumn srch"><input type="search" placeholder="Search"></div>
+        <div class="coloumn donate"><a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Donate.html">Donate Now!</a></div>      
+ </div>        
+    <div class="ham-list">
+        <ul>
+            <li><a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Home.html">Home</a></li>
+            <li><a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Library.html">Library</a></li>
+            <li><a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Shelf.html">Shelf</a></li>
+            <li><a href="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Html\Login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <!DOCTYPE html>
+   
+    <div class="forms">
+    <!--Sign Up and Login Tabs-->
+        <ul class="tab-group">
+            <li class="tab active"><a href="#login">Log In</a></li>
+            <li class="tab"><a href="#signup">Sign Up</a></li>
+        </ul>
+        <!--Login Form-->
+        <form action="#" id="login">
+              <h1>Login on</h1>
+              <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" required="email" />
+                <label for="password">Password</label> 
+                <input type="password" name="password" required/>
+                <input type="submit" value="Login" onclick="myFunc" class="button"/>
+                <p class="text-p"> <a href="#">Forgot password?</a> </p>
+              </div>
+          </form>
+          <!--Sign Up Form-->
+          <form action="#" id="signup">
+              <h1>Sign Up</h1>
+              <div class="input-field">
+                <label for="firstName" id="fName">First Name</label>
+                <input name="firstName" type="text" required="First Name">
+                <label for="lastName">Last Name</label>
+                <input name="lastName" id="lName" type="text" required="Last Name">
+                <label for="email">Email</label> 
+                <input type="email" name="email" id="mail" required="email"/>
+                <p id="eid" class="span-msg"></p>
+                <label for="password">Password</label> 
+                <input type="password" name="password" id="pass1" required/>
+                <p id="msg" class="span-msg"></p>
+                <label for="password">Confirm Password</label> 
+                <input type="password" name="password" id="pass2" required/>
+                <p class="span-msg">Show Password</p>
+                <input type="checkbox" name="box" class="cBox" onclick="checkPass()">
+                <input type="button" value="Sign up" onclick="myFunc()" class="button" />
+              </div>
+          </form>
+    </div>
+    
+    <!--Script for the changing tab effect-->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+          $('.tab a').on('click', function (e) {
+          e.preventDefault();
+          
+          $(this).parent().addClass('active');
+          $(this).parent().siblings().removeClass('active');
+          
+          var href = $(this).attr('href');
+          $('.forms > form').hide();
+          $(href).fadeIn(500);
+        });
+    });
+    </script>
+
+
+    <script src="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Javascript\Login.js"></script><!--Login Script-->
+    <script src="C:\Users\User\Desktop\LPU_COURSES\INT219\Online Library\Javascript\nav-bar.js"></script><!--NavBar Script-->
+</body>
+</html>
