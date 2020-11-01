@@ -1,0 +1,33 @@
+.Message
+{
+    max-width:30%;
+    background-color: rgb(253, 251, 251);
+    margin-left:30%;
+    padding:5%;
+    text-align: center;
+    margin-top:5%;
+    margin-bottom: 5%;
+    font-family: 'Mulish', sans-serif;
+    filter:drop-shadow(2px 2px 2px rgb(65, 64, 64));
+}
+.Message>h1
+{
+    color:#ffb703;
+    font-size:3em;
+    font-family: 'Cormorant Garamond', serif;
+    border-bottom: 1px solid #5ee021;
+}
+.Message>a
+{
+    background-color:#5ee021 ;
+    color:#ffffff;
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left:5%;
+    padding-right:5%;
+    border-radius:10px 10px 10px 10px;
+}
+.Message>a:hover
+{
+    background-color:#4bc014 ;
+}
