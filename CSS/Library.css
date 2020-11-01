@@ -1,0 +1,29 @@
+.typedtext
+{
+   background-color: #252936;
+   text-emphasis: center;
+   font-family: 'Special Elite', cursive;
+   text-align: center;
+   padding:10%;
+   margin-top:1%;
+   color:#faf9f9;
+   font-size:2em;
+}
+
+@media screen and (max-width:800px)
+{
+    .typedtext
+    {
+        padding:5%;
+        font-size:1em;
+    }
+
+}
+@media screen and (max-width:1200px)
+{
+    .typedtext
+    {
+        padding:7%;
+        font-size: 1.25em;
+    }
+}
