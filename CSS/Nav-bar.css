@@ -1,0 +1,224 @@
+body{
+    margin:0;
+    background-color: #f7f3f2;
+}
+.nav-bar
+{
+    display:grid;
+    grid-template-columns:30% 40% 30%;
+    background-color:#394055;
+    padding:1%;
+    top:0;
+    position: sticky;
+    z-index: 100;
+}
+.coloumn
+{
+    font-family: 'Mulish', sans-serif;
+}
+.list
+{
+    margin-left:5%;
+}
+.list>a{
+    padding-left:2%;
+    padding-right:2%;
+    align-content: center;
+    text-decoration:none; 
+    color:#faf9f9;
+    font-weight:bold;
+    
+    
+}
+
+.list>a:hover
+{
+    border-bottom:2px solid #ffb703;
+    
+    
+}
+.donate>a
+{
+    margin-left:30%;
+    color:#ffb703;
+    font-family: 'Alfa Slab One', cursive;
+    text-decoration: none;
+    font-size:1.5em;
+    filter: drop-shadow(2px 1px 2px #161001);
+}
+.donate>a:hover
+{
+    color:#ffc635;
+}
+.srch>input
+{
+   position: absolute;
+   width:40%;
+   height:2em;
+   margin-left:1%; 
+   text-align:center;
+   border-radius:5px;
+   border-style: none;
+   outline:none;
+   font-family: 'Mulish', sans-serif;
+   font-weight:bold;
+}
+/*To remove the cancel button from the search bar*/
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.ham-burg
+{
+    display:none;
+}
+.ham-list
+{
+    display:none;
+}
+@media screen and (max-width:900px)
+{
+    .srch>input
+    {
+        width:500px; 
+        height:30px;
+        margin-top:1%;
+        left:100px;
+    }
+    .list{
+        display:none;
+    }
+    
+    .donate{
+        font-size:1em;
+        margin-left: 2%;
+        text-align-last: center;
+    }
+
+    .ham-burg
+    {
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-content:center;
+        width:50px;
+        height:50px;
+       cursor:pointer;
+       transition:all 0.5s ease-in-out;
+    }
+    .ham-btn
+    {
+        background-color:#faf9f9;
+        height:4px;
+        width:40px;
+        margin-top:50%;
+        border-radius:2px;
+        filter:drop-shadow(1px 1px 1px black);
+        transition:all 0.5s ease-in-out;
+    }
+    .ham-btn::before,
+    .ham-btn::after
+    {
+        content:'';
+        position:absolute;
+        background-color:#faf9f9;
+        height:4px;
+        width:40px;
+        border-radius:2px;
+        filter:drop-shadow(2px 2px 2px grey);
+        transition:all 0.5s ease-in-out;
+    }
+    .ham-btn::before
+    {
+        transform:translateY(-12px);
+    }
+    .ham-btn::after
+    {
+        transform:translateY(12px);
+    }
+    .ham-burg.open .ham-btn{
+        transform:translateX(-50px) rotate(360deg);
+        transition: all 1s;
+        filter:none;
+        background:none;
+        filter:drop-shadow(1px 1px 1px black);
+    }
+    .ham-burg.open .ham-btn::before{
+        transform:rotate(45deg) translate(35px,-35px);
+    }
+    .ham-burg.open .ham-btn::after{
+        transform:rotate(-45deg) translate(35px,35px);
+    }
+    .ham-list.open{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background:#d8e2dc;
+        width: 30%;
+        height: 100%;
+        opacity: .9;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        transition:width 2s;
+        transition-timing-function: cubic-bezier(0.5, 0.5,.5, 0.5);
+        z-index: 100;
+    }
+    .ham-list>ul
+    {
+        margin-left:-100px;
+    }
+    .ham-list.open>ul>li
+    {
+        list-style: none;
+        padding:20%;
+        font-size:1.5em;
+        font-family: 'Mulish', sans-serif;
+       
+    }
+    .ham-list.open>ul>li>a
+    {
+        text-decoration: none;
+        color:#353535;
+    }
+    .ham-list.open>ul>li>a:hover
+    {
+        border-bottom: 2px solid #ffb703;;
+    }
+}   
+
+@media screen and (max-width:800px)
+{
+    .srch>input
+    {
+        left:100px;
+        margin-top:2%;
+        width:400px;
+    }
+    
+}
+
+@media screen and (max-width:650px)
+{
+    .srch>input
+    {
+        width:300px;
+        margin-top:2%;
+        left:100px;
+    }
+  
+}
+@media screen and (max-width:500px)
+{
+    .srch>input
+    {
+        width:250px;
+        margin-top:2%;
+        left:100px;
+    }
+  
+}
+
